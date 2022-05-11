@@ -3,6 +3,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Config from 'react-native-config';
 import PoolList from '../screens/PoolList';
+import AddPool from '../screens/AddPool';
 
 const {PRIMARY_YELLOW} = Config;
 const Stack = createNativeStackNavigator();
@@ -18,7 +19,7 @@ const MainStack = () => (
     }}
   >
     <Stack.Screen name="Pools" component={PoolList} />
-    <Stack.Screen name="AddPool" component={PoolList} />
+    <Stack.Screen name="AddPool" component={AddPool} />
     <Stack.Screen name="AddReport" component={PoolList} />
   </Stack.Navigator>
 );

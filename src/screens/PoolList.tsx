@@ -35,7 +35,7 @@ const pools = [
 ];
 
 const showList = pools.length > 0;
-const PoolList: React.RF = () => (
+const PoolList: React.RF = ({navigation}) => (
   <Wrapper>
     {showList ? (
       <FlatList
@@ -50,6 +50,7 @@ const PoolList: React.RF = () => (
       title=""
       type="solid"
       icon="plus"
+      onPress={() => navigation.navigate('AddPool')}
       containerStyle={{
         bottom: 80,
         right: 20,
