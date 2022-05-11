@@ -4,7 +4,11 @@ import styled from 'styled-components';
 
 const PoolList: React.RF = () => (
   <Wrapper>
-    <Button title="Solid" type="solid" icon="home" />
+    <Button
+      title="Solid"
+      type="solid"
+      icon={<Icon name="home" size={15} color="white" />}
+    />
   </Wrapper>
 );
 

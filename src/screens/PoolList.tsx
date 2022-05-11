@@ -1,6 +1,6 @@
 import React from 'react';
 import Config from 'react-native-config';
-import {Button} from 'react-native-elements';
+import {Button, Icon} from 'react-native-elements';
 import styled from 'styled-components';
 
 import {NoItems} from '../components/Typo';
@@ -49,7 +49,7 @@ const PoolList: React.RF = ({navigation}) => (
     <Button
       title=""
       type="solid"
-      icon="plus"
+      icon={<Icon name="add" size={30} color="white" />}
       onPress={() => navigation.navigate('AddPool')}
       containerStyle={{
         bottom: 80,

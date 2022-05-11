@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
-import {Button, Input} from 'react-native-elements';
+import {Button, Input, Icon} from 'react-native-elements';
 import styled from 'styled-components';
 import {Formik} from 'formik';
 import {Camera, useCameraDevices} from 'react-native-vision-camera';
 import * as Yup from 'yup';
 
-const AddPool: React.RF = () => {
+const AddPool: React.RF = ({navigation}) => {
   interface FormProps {
     name: String;
     capacity: Number | '';
@@ -52,6 +52,7 @@ const AddPool: React.RF = () => {
         validationSchema={AddPoolSchema}
         onSubmit={values => {
           console.log('>> ', values);
+          navigation.navigate('Pools');
         }}
       >
         {({handleSubmit, handleChange, handleBlur, values, errors}) => (
@@ -84,7 +85,7 @@ const AddPool: React.RF = () => {
             )}
             <Button
               title="Add Photo"
-              icon="camera"
+              icon={<Icon name="photo" size={15} />}
               type="outline"
               onPress={() => takePicture()}
             />
